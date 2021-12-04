@@ -1,0 +1,60 @@
+<ng-container *transloco="let translate">
+
+  <h2 class="my-5 text-center">{{translate('reporters')}}</h2>
+
+  <p-table [value]="reporters" [scrollable]="true" scrollHeight="300px" selectionMode="single"
+    [(selection)]="selectedReporter" dataKey="id" responsiveLayout="scroll" [resizableColumns]="true"
+    styleClass="p-datatable-sm p-datatable-gridlines" (onRowSelect)="onRowSelect()" class="desktop">
+
+    <ng-template pTemplate="colgroup">
+      <colgroup>
+        <col>
+        <col>
+        <col>
+        <col>
+      </colgroup>
+    </ng-template>
+
+    <ng-template pTemplate="header">
+      <tr>
+        <th pResizableColumn *ngFor="let header of headers">
+          {{translate(header)}}
+        </th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-reporter>
+      <tr [pSelectableRow]="reporter">
+        <td *ngFor="let header of headers">
+          {{reporter[header]}}
+        </td>
+      </tr>
+    </ng-template>
+
+  </p-table>
+
+  <div class="flex flex-column align-items-center">
+    <p-card *ngFor="let reporter of reporters" [style]="{'min-width': '300px'}" styleClass="p-card-shadow my-2"
+      class="mobile">
+      <p *ngFor="let header of headers" class="flex justify-content-between mb-3">
+        <span>{{translate(header)}}</span>
+        <span>{{reporter[header]}}</span>
+      </p>
+
+      <p-inplace closable="closable" [style]="{'min-height':'33px'}">
+
+        <ng-template pTemplate="display">
+          <p-button label="{{translate('clickDetails')}}"></p-button>
+        </ng-template>
+
+        <ng-template pTemplate="content">
+          <app-reporters-details [reporter]="reporter" [detailHeaders]="detailHeaders" class="text-xs">
+          </app-reporters-details>
+        </ng-template>
+      </p-inplace>
+    </p-card>
+  </div>
+
+</ng-container>
+
+<p-progressSpinner *ngIf="loading" class="flex justify-content-center mt-5"></p-progressSpinner>

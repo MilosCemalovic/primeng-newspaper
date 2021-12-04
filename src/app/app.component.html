@@ -1,0 +1,7 @@
+<p-menubar [model]="navItems">
+  <button type="button" pButton class="p-button-text" label="{{activeLang | transloco}}"
+    (click)="menu.toggle($event)"></button>
+  <p-menu #menu [popup]="true" [model]="langs"></p-menu>
+</p-menubar>
+
+<router-outlet></router-outlet>

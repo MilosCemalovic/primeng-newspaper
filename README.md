@@ -39,7 +39,7 @@ Project is using APIs from:
 - Ng2 Search Filter
 - Transloco Service
 
-## Intaled PrimeNG components
+## Installed PrimeNG components
 
 - Menubar
 - Card

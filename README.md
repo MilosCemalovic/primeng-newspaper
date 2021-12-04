@@ -52,4 +52,4 @@ Project is using APIs from:
 - Menu
 - Inplace
 
-## I have the same project in Angular Material
+## I have the same project in Angular Material on this GitHub account

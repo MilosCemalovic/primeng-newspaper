@@ -46,14 +46,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Installed PrimeNG components
 
 - Menubar
-- Card
-- Button
-- ProgressSpinner
-- TabView
-- InputText
 - Table
 - DynamicDialog
 - Menu
 - Inplace
+- TabView
+- Card
+- Button
+- ProgressSpinner
+- InputText
 
 ## I have the same project in Angular Material on this GitHub account

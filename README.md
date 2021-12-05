@@ -8,23 +8,27 @@ Run `npm i` to install packages
 
 ## Development server
 
-Run `ng s` for a dev server. Navigate to `http://localhost:4200/`.
+Run `ng s` for a dev server
+Navigate to `http://localhost:4200/`
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--configuration production` flag for a production build. The `--prod` flag is deprecated, and we must now use `--configuration production` flag.
+Run `ng build` to build the project
+The build artifacts will be stored in the `dist/` directory
+Use the `--configuration production` flag for a production build
+The `--prod` flag is deprecated, and we must now use `--configuration production` flag
 
 ## Description
 
 - User is getting data from Mediastack API and JSONPlaceholder API
 - Navigation is displayed via PrimeNG Menubar
-- User is able to switch between 2 News categories (Technology and Serbian) via PrimeNG TabView
-- User can view Reporters and it's details
-- User is able to search articles by keywords via Ng2 Search Filter
-- User can translate content between English and Serbian laguage via PrimeNG Menu and Transloco Service
-- Mediastack API news articles contain: title, description, author, date of publish, image (if has one) and URL to original post. On link click opens original article in new window.
-- Mediastack articles are filtered and displayed via PrimeNG Card & Button
-- JSONPlaceholder API is displayed via PrimeNG Table & Dynamic Dialog on large screens and PrimeNG Card & Inplace on mobile screens
+- User is able to switch between 2 News (Mediastack) categories via PrimeNG TabView
+- News articles contain: title, description, author, date of publish, image (if has one) and URL to original post
+- News articles are filtered and displayed via PrimeNG Card & Button
+- User can view Reporters (JSONPlaceholder) via PrimeNG Table & Dynamic Dialog on large screens and it's details via PrimeNG Card & Inplace on mobile screens
+- User is able to search News articles by keywords via Ng2 Search Filter
+- User can switch between English and Serbian laguage via PrimeNG Menu
+- User can translate content via Transloco Service
 
 ## Project APIs
 

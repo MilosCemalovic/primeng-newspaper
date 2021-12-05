@@ -16,13 +16,15 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Description
 
-- User is redirected to Mediastack API news
-- User is able to switch between 2 news categories (Technology and Serbian)
-- User is able to search articles by keywords
-- User can translate content between English and Serbian laguage
+- User is getting data from Mediastack API and JSONPlaceholder API
+- Navigation is displayed via PrimeNG Menubar
+- User is able to switch between 2 News categories (Technology and Serbian) via PrimeNG TabView
+- User can view Reporters and it's details
+- User is able to search articles by keywords via Ng2 Search Filter
+- User can translate content between English and Serbian laguage via PrimeNG Menu and Transloco Service
 - Mediastack API news articles contain: title, description, author, date of publish, image (if has one) and URL to original post. On link click opens original article in new window.
-- Mediastack articles are filtered
-- JSONPlaceholder API is displayed via table & dialog on large screens and card & inplace on mobile screens
+- Mediastack articles are filtered and displayed via PrimeNG Card & Button
+- JSONPlaceholder API is displayed via PrimeNG Table & Dynamic Dialog on large screens and PrimeNG Card & Inplace on mobile screens
 
 ## Project APIs
 

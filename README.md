@@ -56,4 +56,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - ProgressSpinner
 - InputText
 
-## I have the same project in Angular Material on this GitHub account
+## There is the same project in Angular Material on this GitHub account

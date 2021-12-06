@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   activeLang = 'en'
 
   navItems: MenuItem[] = [
-    { id: 'news', label: 'news', icon: 'pi pi-globe', routerLink: ['news'] },
+    { id: 'news', label: 'news', icon: 'pi pi-id-card', routerLink: ['news'] },
     { id: 'reporters', label: 'reporters', icon: 'pi pi-users', routerLink: ['reporters'] }
   ]
 

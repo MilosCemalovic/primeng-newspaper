@@ -24,7 +24,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Navigation is displayed via PrimeNG Menubar
 - User is able to switch between 2 News categories via PrimeNG TabView
 - News articles contain: title, description, author, date of publish, image (if has one) and URL to original post
-- News articles are filtered and displayed via PrimeNG Card & Button
+- News articles are filtered by language & category
+- News articles can be sorted - ASC or DESC
+- News articles are displayed via PrimeNG Card & Button
 - User is able to search News articles by keywords via Ng2 Search Filter
 - User can view Reporters via PrimeNG Table & Dynamic Dialog on large screens and it's details via PrimeNG Card & Inplace on mobile screens
 - User can choose to not see Reporter details (pop-up) Dialog via ToggleButton

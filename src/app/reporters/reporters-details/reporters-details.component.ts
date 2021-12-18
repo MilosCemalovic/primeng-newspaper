@@ -10,5 +10,6 @@ export class ReportersDetailsComponent {
 
   @Input() detailHeaders: string[]
   @Input() reporter: Reporter
+  @Input() loading: boolean
 
 }

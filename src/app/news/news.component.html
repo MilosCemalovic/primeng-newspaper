@@ -1,15 +1,11 @@
-<div class="m-4" *transloco="let translate">
+<p-tabView styleClass="m-4" *transloco="let translate">
 
-  <p-tabView>
+  <p-tabPanel header="{{translate('technology')}}">
+    <app-technology></app-technology>
+  </p-tabPanel>
 
-    <p-tabPanel header="{{translate('technology')}}">
-      <app-technology></app-technology>
-    </p-tabPanel>
+  <p-tabPanel header="{{translate('serbian')}}">
+    <app-serbian></app-serbian>
+  </p-tabPanel>
 
-    <p-tabPanel header="{{translate('serbian')}}">
-      <app-serbian></app-serbian>
-    </p-tabPanel>
-
-  </p-tabView>
-
-</div>
+</p-tabView>

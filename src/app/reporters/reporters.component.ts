@@ -17,6 +17,7 @@ export class ReportersComponent implements OnInit {
   selectedReporter: Reporter
   headers = ['id', 'name', 'username', 'website']
   detailHeaders = ['phone', 'email', 'city', 'streetAddress', 'suite', 'zipCode', 'streetAddressLatitude', 'streetAddressLongitude', 'company', 'companyBusinessServices', 'companyCatchphrase']
+  checked = true
 
   constructor(
     private reportersService: ReportersService,
@@ -43,14 +44,16 @@ export class ReportersComponent implements OnInit {
   }
 
   onRowSelect() {
-    this.dialog.open(ReportersDialogComponent, {
-      header: this.transloco.translate('repDetails'),
-      width: '90%',
-      data: {
-        reporter: this.selectedReporter,
-        detailHeaders: this.detailHeaders
-      }
-    })
+    if (this.checked) {
+      this.dialog.open(ReportersDialogComponent, {
+        header: this.transloco.translate('repDetails'),
+        width: '90%',
+        data: {
+          reporter: this.selectedReporter,
+          detailHeaders: this.detailHeaders
+        }
+      })
+    }
   }
 
 }

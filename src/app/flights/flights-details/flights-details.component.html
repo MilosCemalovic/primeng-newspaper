@@ -1,0 +1,26 @@
+<ng-container *transloco="let translate">
+  <div *ngFor="let selectedWorkerFlight of selectedWorkerFlights" class="flex flex-column justify-content-center">
+    <p-card styleClass="p-card-shadow my-2">
+      <div class="flex justify-content-between">
+        <div>
+          <p *ngFor="let heading of headings">{{translate(heading)|uppercase}}</p>
+        </div>
+
+        <div class="text-right">
+          <p> {{selectedWorkerFlight.num}} </p>
+          <p> {{selectedWorkerFlight.from}} </p>
+          <p> {{selectedWorkerFlight.to}} </p>
+          <p> {{selectedWorkerFlight.from_date|date}} </p>
+          <p> {{selectedWorkerFlight.to_date|date}} </p>
+          <p> {{selectedWorkerFlight.plane}} </p>
+          <p> {{selectedWorkerFlight.duration|time}} </p>
+          <p> {{selectedWorkerFlight.from_gate}} </p>
+          <p> {{selectedWorkerFlight.to_gate}} </p>
+        </div>
+      </div>
+    </p-card>
+
+    <button pButton ngxClipboard [cbContent]="selectedWorkerFlight.num"
+      class="align-self-center">{{translate('copyNum')}}</button>
+  </div>
+</ng-container>

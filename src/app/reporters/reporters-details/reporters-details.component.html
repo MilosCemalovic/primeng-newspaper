@@ -1,6 +1,6 @@
-<div class="flex justify-content-between">
+<div *ngIf="!loading" class="flex justify-content-between">
   <div>
-    <p *ngFor="let detailHeader of detailHeaders" class="font-medium"> {{detailHeader | transloco}} </p>
+    <p *ngFor="let detailHeader of detailHeaders" class="font-medium"> {{detailHeader|transloco}} </p>
   </div>
 
   <div class="text-right mb-3">
@@ -17,3 +17,5 @@
     <p> {{reporter.company.catchPhrase}} </p>
   </div>
 </div>
+
+<p-progressSpinner *ngIf="loading" styleClass="flex justify-content-center mt-5"></p-progressSpinner>

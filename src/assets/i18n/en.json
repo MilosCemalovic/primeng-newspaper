@@ -23,5 +23,19 @@
   "serbian": "Serbian",
   "search": "Search by keywords",
   "viewFull": "View article",
-  "clickDetails": "Click for details"
+  "clickDetails": "Click for details",
+  "flights": "Flights",
+  "workerFlights": "Worker flights",
+  "num": "Number",
+  "from": "From",
+  "to": "To",
+  "from_date": "From date",
+  "to_date": "To date",
+  "plane": "Plane",
+  "duration": "Duration",
+  "from_gate": "From gate",
+  "to_gate":"To gate",
+  "copyNum": "Copy number",
+  "popupOn": "pop-up Yes",
+  "popupOff": "pop-up No"
 }

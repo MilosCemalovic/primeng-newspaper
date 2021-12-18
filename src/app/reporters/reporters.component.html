@@ -2,40 +2,53 @@
 
   <h2 class="my-5 text-center">{{translate('reporters')}}</h2>
 
-  <p-table [value]="reporters" [scrollable]="true" scrollHeight="300px" selectionMode="single"
-    [(selection)]="selectedReporter" dataKey="id" responsiveLayout="scroll" [resizableColumns]="true"
-    styleClass="p-datatable-sm p-datatable-gridlines" (onRowSelect)="onRowSelect()" class="desktop">
+  <div class="desktop">
 
-    <ng-template pTemplate="colgroup">
-      <colgroup>
-        <col>
-        <col>
-        <col>
-        <col>
-      </colgroup>
-    </ng-template>
+    <p-toggleButton [(ngModel)]="checked" onLabel="{{translate('popupOn')}}" offLabel="{{translate('popupOff')}}"
+      onIcon="{{'pi pi-thumbs-up'}}" offIcon="{{'pi pi-thumbs-down'}}" [style]="{'width': '10em'}"
+      styleClass="flex m-5">
+    </p-toggleButton>
 
-    <ng-template pTemplate="header">
-      <tr>
-        <th pResizableColumn *ngFor="let header of headers">
-          {{translate(header)}}
-        </th>
-      </tr>
-    </ng-template>
+    <p-table [value]="reporters" [scrollable]="true" scrollHeight="300px" selectionMode="single"
+      [(selection)]="selectedReporter" dataKey="id" responsiveLayout="scroll" [resizableColumns]="true"
+      styleClass="p-datatable-sm p-datatable-gridlines shadow-1" (onRowSelect)="onRowSelect()">
 
-    <ng-template pTemplate="body" let-reporter>
-      <tr [pSelectableRow]="reporter">
-        <td *ngFor="let header of headers">
-          {{reporter[header]}}
-        </td>
-      </tr>
-    </ng-template>
+      <ng-template pTemplate="colgroup">
+        <colgroup>
+          <col style="width:35px">
+          <col>
+          <col>
+          <col>
+        </colgroup>
+      </ng-template>
 
-  </p-table>
+      <ng-template pTemplate="header">
+        <tr>
+          <th pResizableColumn *ngFor="let header of headers">
+            {{translate(header)}}
+          </th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-reporter>
+        <tr [pSelectableRow]="reporter">
+          <td *ngFor="let header of headers">
+            {{reporter[header]}}
+          </td>
+        </tr>
+      </ng-template>
+
+    </p-table>
+
+    <div *ngIf="!checked && selectedReporter" class="px-8 pt-4">
+      <h2 class="my-5 text-center">{{translate('repDetails')}}</h2>
+      <app-reporters-details [reporter]="selectedReporter" [detailHeaders]="detailHeaders" [loading]="loading">
+      </app-reporters-details>
+    </div>
+  </div>
 
   <div class="flex flex-column align-items-center">
-    <p-card *ngFor="let reporter of reporters" [style]="{'min-width': '300px'}" styleClass="p-card-shadow my-2"
-      class="mobile">
+    <p-card *ngFor="let reporter of reporters" [style]="{'min-width': '300px'}" styleClass="p-card-shadow my-2 mobile">
       <p *ngFor="let header of headers" class="flex justify-content-between mb-3">
         <span>{{translate(header)}}</span>
         <span>{{reporter[header]}}</span>
@@ -48,7 +61,8 @@
         </ng-template>
 
         <ng-template pTemplate="content">
-          <app-reporters-details [reporter]="reporter" [detailHeaders]="detailHeaders" class="text-xs">
+          <app-reporters-details [reporter]="reporter" [detailHeaders]="detailHeaders" [loading]="loading"
+            class="text-xs">
           </app-reporters-details>
         </ng-template>
       </p-inplace>
@@ -57,4 +71,4 @@
 
 </ng-container>
 
-<p-progressSpinner *ngIf="loading" class="flex justify-content-center mt-5"></p-progressSpinner>
+<p-progressSpinner *ngIf="loading" styleClass="flex justify-content-center mt-5"></p-progressSpinner>

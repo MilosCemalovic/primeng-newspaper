@@ -43,6 +43,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Angular CDK
 - Ng2 Search Filter
 - Transloco Service
+- ngxClipboard
 
 ## Installed PrimeNG components
 
@@ -52,6 +53,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Menu
 - Inplace
 - TabView
+- Listbox
+- Sidebar
+- ToggleButton
 - Card
 - Button
 - ProgressSpinner

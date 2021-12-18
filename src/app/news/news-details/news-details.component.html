@@ -4,14 +4,14 @@
       <i class="pi pi-search"></i>
       <input type="text" pInputText [(ngModel)]="term" placeholder="{{translate('search')}}">
     </span>
-    <p-button class="mr-2" icon="pi pi-arrow-up" (onClick)="sortAsc()"></p-button>
+    <p-button styleClass="mr-2" icon="pi pi-arrow-up" (onClick)="sortAsc()"></p-button>
     <p-button icon="pi pi-arrow-down" (onClick)="sortDesc()"></p-button>
   </div>
 
   <div class="flex justify-content-center flex-wrap">
 
     <p-card *ngFor="let article of articles | filter:term" [header]="article.title" [subheader]="article.author"
-      [style]="{width: '360px'}" styleClass="p-card-shadow" class="m-5">
+      [style]="{width: '360px'}" styleClass="p-card-shadow m-5">
 
       <ng-template pTemplate="header">
         <img *ngIf="article.image" [alt]="article.title" [src]="article.image">
@@ -37,4 +37,4 @@
   </div>
 </ng-container>
 
-<p-progressSpinner *ngIf="loading" class="flex justify-content-center mt-5"></p-progressSpinner>
+<p-progressSpinner *ngIf="loading" styleClass="flex justify-content-center mt-5"></p-progressSpinner>

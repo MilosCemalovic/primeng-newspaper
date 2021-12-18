@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core'
+import { TranslocoModule } from '@ngneat/transloco'
 import { TranslocoRootModule } from './transloco-root.module'
+import { Ng2SearchPipeModule } from 'ng2-search-filter'
+import { FormsModule } from '@angular/forms'
 import { MenubarModule } from 'primeng/menubar'
 import { CardModule } from 'primeng/card'
 import { ButtonModule } from 'primeng/button'
@@ -10,10 +13,17 @@ import { TableModule } from 'primeng/table'
 import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog'
 import { MenuModule } from 'primeng/menu'
 import { InplaceModule } from 'primeng/inplace'
+import { ListboxModule } from 'primeng/listbox'
+import { ClipboardModule } from 'ngx-clipboard'
+import { SidebarModule } from 'primeng/sidebar'
+import { ToggleButtonModule } from 'primeng/togglebutton'
 
 @NgModule({
   exports: [
+    TranslocoModule,
     TranslocoRootModule,
+    FormsModule,
+    Ng2SearchPipeModule,
     MenubarModule,
     CardModule,
     ButtonModule,
@@ -23,7 +33,11 @@ import { InplaceModule } from 'primeng/inplace'
     TableModule,
     DynamicDialogModule,
     MenuModule,
-    InplaceModule
+    InplaceModule,
+    ListboxModule,
+    SidebarModule,
+    ClipboardModule,
+    ToggleButtonModule
   ],
   providers: [DialogService]
 })

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { Article } from 'src/app/interfaces/article'
 
 @Component({
   selector: 'app-news-details',
@@ -7,9 +8,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
 })
 export class NewsDetailsComponent {
 
-  @Input() term
-  @Input() articles
-  @Input() loading
+  @Input() term: string
+  @Input() articles: Article[]
+  @Input() loading: boolean
 
   @Output() sortEmitter = new EventEmitter<string>()
 

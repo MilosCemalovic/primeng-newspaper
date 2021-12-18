@@ -14,7 +14,8 @@ export class AppComponent implements OnInit {
 
   navItems: MenuItem[] = [
     { id: 'news', label: 'news', icon: 'pi pi-id-card', routerLink: ['news'] },
-    { id: 'reporters', label: 'reporters', icon: 'pi pi-users', routerLink: ['reporters'] }
+    { id: 'reporters', label: 'reporters', icon: 'pi pi-users', routerLink: ['reporters'] },
+    { id: 'flights', label: 'flights', icon: 'pi pi-send', routerLink: ['flights'] }
   ]
 
   langs: MenuItem[] = [
@@ -30,12 +31,12 @@ export class AppComponent implements OnInit {
     this.activeLang = this.transloco.getActiveLang()
 
     // if (!this.activeLang) {
-    // this.activeLang = this.transloco.getActiveLang()
-    // this.transloco.setActiveLang(localStorage.getItem('lang'))
+    //   this.activeLang = this.transloco.getActiveLang()
+    //   this.transloco.setActiveLang(localStorage.getItem('lang'))
 
-    // this.transloco.langChanges$.subscribe(
-    //   () => localStorage.setItem('lang', this.activeLang)
-    // )
+    //   this.transloco.langChanges$.subscribe(
+    //     () => localStorage.setItem('lang', this.activeLang)
+    //   )
     // }
 
     this.transloco.selectTranslate('news').subscribe(
@@ -44,6 +45,10 @@ export class AppComponent implements OnInit {
 
     this.transloco.selectTranslate('reporters').subscribe(
       translate => MenuItemUtil.findAction(this.navItems, 'reporters').label = translate
+    )
+
+    this.transloco.selectTranslate('flights').subscribe(
+      translate => MenuItemUtil.findAction(this.navItems, 'flights').label = translate
     )
 
   }

@@ -23,5 +23,19 @@
   "serbian": "Srpske",
   "search": "Pretraži po rečima",
   "viewFull": "Pogledaj članak",
-  "clickDetails": "Klikni za detalje"
+  "clickDetails": "Klikni za detalje",
+  "flights": "Letovi",
+  "workerFlights": "Letovi radnika",
+  "num": "Broj",
+  "from": "Od",
+  "to": "Do",
+  "from_date": "Od datuma",
+  "to_date": "Do datuma",
+  "plane": "Avion",
+  "duration": "Trajanje",
+  "from_gate": "Od izlaza",
+  "to_gate":"Do izlaza",
+  "copyNum": "Kopiraj broj",
+  "popupOn": "pop-up Da",
+  "popupOff": "pop-up Ne"
 }

@@ -1,0 +1,16 @@
+<ng-container *transloco="let translate">
+  <h2 class="my-5 text-center"> {{translate('workerFlights')}} </h2>
+
+  <p class="text-center">{{translate('clickDetails')}}</p>
+
+  <p-sidebar [(visible)]="sidebar" [baseZIndex]="10">
+    <app-flights-details [selectedWorkerFlights]="selectedWorkerFlights">
+    </app-flights-details>
+  </p-sidebar>
+
+  <p-listbox *ngIf="!loading" [options]="workers" [(ngModel)]="selectedWorker" optionLabel="name"
+    (onClick)="onListSelect(selectedWorker)" styleClass="m-5">
+  </p-listbox>
+
+  <p-progressSpinner *ngIf="loading" styleClass="flex justify-content-center mt-5"></p-progressSpinner>
+</ng-container>

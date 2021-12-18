@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common'
 import { ReportersRoutingModule } from './reporters-routing.module'
 import { ReportersComponent } from './reporters.component'
 import { PrimengModule } from '../primeng.module'
-import { ReportersDialogComponent } from './reporters-dialog/reporters-dialog.component';
+import { ReportersDialogComponent } from './reporters-dialog/reporters-dialog.component'
 import { ReportersDetailsComponent } from './reporters-details/reporters-details.component'
 
 

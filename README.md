@@ -24,16 +24,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Navigation is displayed via PrimeNG Menubar
 - User is able to switch between 2 News categories via PrimeNG TabView
 - News articles contain: title, description, author, date of publish, image (if has one) and URL to original post
+- User is able to search News articles by keywords via Ng2 Search Filter
 - News articles are filtered by language & category
 - News articles can be sorted - ASC or DESC
-- News articles are displayed via PrimeNG Card & Button
-- User is able to search News articles by keywords via Ng2 Search Filter
+- News articles are displayed via PrimeNG Card
+- Original News articles can be seen via PrimeNG Button
 - User can view Reporters via PrimeNG Table & Dynamic Dialog on large screens and it's details via PrimeNG Card & Inplace on mobile screens
 - User can choose to not see Reporter details (pop-up) Dialog via ToggleButton
 - User can view Workers via PrimeNG Listbox
 - User can view Worker Flights via PrimeNG Sidebar and PrimeNG Card
 - User can copy Worker Flights number via ngxClipboard
-- Worker Flights are modified with custom and build-in pipes
+- Worker Flights are modified with custom and build-in Angular pipes
 - User can switch between English and Serbian laguage via PrimeNG Menu
 - Content is translated via Transloco Service
 

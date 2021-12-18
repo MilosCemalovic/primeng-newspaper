@@ -30,13 +30,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - News articles are displayed via PrimeNG Card
 - Original News articles can be seen via PrimeNG Button
 - User can view Reporters via PrimeNG Table & Dynamic Dialog on large screens and it's details via PrimeNG Card & Inplace on mobile screens
-- User can choose to not see Reporter details (pop-up) Dialog via ToggleButton
+- User can choose not to see Reporter details (pop-up) Dialog via PrimeNG ToggleButton
 - User can view Workers via PrimeNG Listbox
 - User can view Worker Flights via PrimeNG Sidebar and PrimeNG Card
 - User can copy Worker Flights number via ngxClipboard
 - Worker Flights are modified with custom and build-in Angular pipes
 - User can switch between English and Serbian laguage via PrimeNG Menu
 - Content is translated via Transloco Service
+- Project is using PrimeFlex and custom styles
 
 ## Project is using APIs from
 

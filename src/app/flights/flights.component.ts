@@ -12,7 +12,7 @@ export class FlightsComponent implements OnInit {
 
   workers: Worker[] = []
   selectedWorker: Worker
-  loading = true
+  loading = false
   sidebar = false
   selectedWorkerFlights: WorkerFlight[] = []
 
@@ -23,6 +23,7 @@ export class FlightsComponent implements OnInit {
   }
 
   getWokersFromServer() {
+    this.loading = true
     this.flightsService.getWorkers().subscribe(
       (workers) => {
         this.loading = false

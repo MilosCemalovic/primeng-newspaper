@@ -10,7 +10,7 @@ import { Article } from 'src/app/interfaces/article'
 export class TechnologyComponent implements OnInit {
 
   articles: Article[] = []
-  loading = true
+  loading = false
   term = ''
   sort = 'desc'
 
@@ -24,6 +24,7 @@ export class TechnologyComponent implements OnInit {
   }
 
   getTechnology() {
+    this.loading = true
     this.newsService.getTechnologyNews(this.sort).subscribe(
       (news) => {
         this.loading = false

@@ -13,7 +13,7 @@ import { TranslocoService } from '@ngneat/transloco'
 export class ReportersComponent implements OnInit {
 
   reporters: Reporter[] = []
-  loading = true
+  loading = false
   selectedReporter: Reporter
   headers = ['id', 'name', 'username', 'website']
   detailHeaders = ['phone', 'email', 'city', 'streetAddress', 'suite', 'zipCode', 'streetAddressLatitude', 'streetAddressLongitude', 'company', 'companyBusinessServices', 'companyCatchphrase']
@@ -30,6 +30,7 @@ export class ReportersComponent implements OnInit {
   }
 
   getReportersFromService() {
+    this.loading = true
     this.reportersService.getReporters().subscribe(
       (reporters) => {
         this.loading = false

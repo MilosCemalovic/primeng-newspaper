@@ -25,7 +25,7 @@ export class FlightsComponent implements OnInit {
   getWokersFromServer() {
     this.loading = true
     this.flightsService.getWorkers().subscribe(
-      (workers) => {
+      (workers: Worker[]) => {
         this.loading = false
         this.workers = workers
       },

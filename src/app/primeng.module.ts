@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core'
 import { TranslocoModule } from '@ngneat/transloco'
-import { TranslocoRootModule } from './transloco-root.module'
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
 import { FormsModule } from '@angular/forms'
 import { MenubarModule } from 'primeng/menubar'
@@ -21,7 +20,6 @@ import { ToggleButtonModule } from 'primeng/togglebutton'
 @NgModule({
   exports: [
     TranslocoModule,
-    TranslocoRootModule,
     FormsModule,
     Ng2SearchPipeModule,
     MenubarModule,

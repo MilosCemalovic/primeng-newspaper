@@ -27,17 +27,14 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     // Get language from Local Storage
-    this.transloco.setActiveLang(localStorage.getItem('lang'))
+    if (!localStorage.getItem('lang')) {
+      this.transloco.setActiveLang('en')
+    } else {
+      this.transloco.setActiveLang(localStorage.getItem('lang'))
+    }
+
     this.activeLang = this.transloco.getActiveLang()
 
-    // if (!this.activeLang) {
-    //   this.activeLang = this.transloco.getActiveLang()
-    //   this.transloco.setActiveLang(localStorage.getItem('lang'))
-
-    //   this.transloco.langChanges$.subscribe(
-    //     () => localStorage.setItem('lang', this.activeLang)
-    //   )
-    // }
 
     this.transloco.selectTranslate('news').subscribe(
       translate => MenuItemUtil.findAction(this.navItems, 'news').label = translate

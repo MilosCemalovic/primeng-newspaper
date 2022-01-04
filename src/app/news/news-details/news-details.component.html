@@ -1,11 +1,13 @@
 <ng-container *transloco="let translate">
-  <div class="flex justify-content-center">
+  <div class="flex justify-content-between">
     <span class="p-input-icon-left mr-2">
       <i class="pi pi-search"></i>
       <input type="text" pInputText [(ngModel)]="term" placeholder="{{translate('search')}}">
     </span>
-    <p-button styleClass="mr-2" icon="pi pi-arrow-up" (onClick)="sortAsc()"></p-button>
-    <p-button icon="pi pi-arrow-down" (onClick)="sortDesc()"></p-button>
+    <div>
+      <p-button styleClass="mr-2" icon="pi pi-arrow-up" (onClick)="sortAsc()"></p-button>
+      <p-button icon="pi pi-arrow-down" (onClick)="sortDesc()"></p-button>
+    </div>
   </div>
 
   <div class="flex justify-content-center flex-wrap">

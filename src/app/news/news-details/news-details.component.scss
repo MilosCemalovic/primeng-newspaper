@@ -1,1 +1,5 @@
-// Place styles here
+.btn-wrapper {
+  @media only screen and (max-width: 410px) {
+    margin-top: 10px;
+  }
+}
